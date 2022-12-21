@@ -1,0 +1,68 @@
+### POST ####
+POST https://mindset-consulting--llc-mindsetbtpdev-btp-dev-s4htoolap6090a27c.cfapps.us10.hana.ondemand.com/api/v2/srv/ZMINDSET_S4APPFINDER_SRV/InquiryFormSet
+Content-Type: application/json
+
+{
+"email": "testuser@mindsetconsulting.com",
+"name": "Hari",
+"designation": "Sr Developer",
+"organization": "Mindset LLC",
+"contactNo": "",
+"plannedusage": "01 ",
+"comments": ""
+}
+
+### POST ####
+POST https://mindset-consulting--llc-mindsetbtpdev-btp-dev-s4htoolap6090a27c.cfapps.us10.hana.ondemand.com/api/v2/srv/ZMINDSET_S4APPFINDER_SRV/Roles_CatalogsSet
+Content-Type: application/json
+
+{
+    "role"          : "20a3158b-1ef3-4515-a1f6-1bc1f3e1c33c",
+    "catalog"        : "ebcc3db0-0cf7-415f-bd3f-6843e906906b"
+}
+
+### POST ####
+POST https://mindset-consulting--llc-mindsetbtpdev-btp-dev-s4htoolap6090a27c.cfapps.us10.hana.ondemand.com/api/v2/srv/ZMINDSET_S4APPFINDER_SRV/VariantSet
+Content-Type: application/json
+
+{
+    "name"          : "Test Variant Hari",
+    "values"   : [{
+        "tCode": "MIGO",
+        "appID": "F0753"
+    },{
+        "tCode": "CK84_99",
+        "appID": "CK80_99"
+    }],
+    "email"    : "harikrishnaanatha@mindsetconsulting.com"    
+}
+
+###
+POST http://localhost:4004/api/v2/srv/ZMINDSET_S4APPFINDER_SRV/UserSet
+Content-Type: application/json
+
+{
+    "email"          : "testuser@mindsetconsulting.com"
+}
+
+###
+POST http://localhost:4004/api/v2/srv/ZMINDSET_S4APPFINDER_SRV/InquiryFormSet
+Content-Type: application/json
+
+{
+"email": "testuser@mindsetconsulting.com",
+"name": "Hari",
+"designation": "Sr Developer",
+"organization": "Mindset LLC",
+"contactNo": "",
+"plannedusage": "01 ",
+"comments": ""
+}
+
+### DELETE ####
+
+DELETE https://cnh-industrial-italia-s-p-a--societ--a-socio-unico-devel98761f8.cfapps.eu10-004.hana.ondemand.com/api/v2/srv/ZPRAPPROVALSRV/PurchaceReqSet/a7913311-8e41-4959-b1f0-7336e14ddd6f
+
+### DELETE ####
+
+DELETE https://cnh-industrial-italia-s-p-a--societ--a-socio-unico-devel98761f8.cfapps.eu10-004.hana.ondemand.com/api/v2/srv/ZPRAPPROVALSRV/CommentSet/c1df960b-d728-4d19-ab20-57d12de72727
