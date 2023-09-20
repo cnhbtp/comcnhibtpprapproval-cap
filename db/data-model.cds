@@ -2,14 +2,15 @@ using { Currency, managed, cuid } from '@sap/cds/common';
 namespace com.cnhi.btp.prapprovalsrvs;
 
 entity PurchaceReq {
-    key id              : UUID;
-        pr              : String;
-        status          : String;
-        nextApprover    : String;
-        requestor       : String;
-        level           : Association to many Level on level.prID = $self;
-        comments        : Association to many Comments on comments.prID = $self;
-        history        : Association to many History on history.prID = $self;
+    key id                : UUID;
+        pr                : String;
+        status            : String;
+        nextApprover      : String;
+        nextApproverFrgzu : String;
+        requestor         : String;
+        level             : Association to many Level on level.prID = $self;
+        comments          : Association to many Comments on comments.prID = $self;
+        history           : Association to many History on history.prID = $self;
 }
 
 entity Comments: managed {
@@ -28,8 +29,8 @@ entity History: managed {
         prID            : Association to PurchaceReq;
         pr              : String;
         status          : String;
-        userID           : String;
-        userName         : String;
+        userID          : String;
+        userName        : String;
 }
 
 entity Level {
