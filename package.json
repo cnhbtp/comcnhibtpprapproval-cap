@@ -6,15 +6,23 @@
     "license": "UNLICENSED",
     "private": true,
     "dependencies": {
-        "@sap/cds": "^5",
+        "@sap/cds": "^7",
         "express": "^4",
-        "hdb": "^0.18.3"
+        "hdb": "^0.19.0"
     },
     "devDependencies": {
         "sqlite3": "^5.0.2"
     },
-    "scripts": {
-        "start": "cds run"
+    "engines": {
+        "node": "^18"
+    },
+    "scripts": {    
+        "start": "cds run",
+        "mock": "cds watch --with-mocks",
+        "build:cds": "cds build --production",
+        "build:mta": "mbt build -t gen --mtar mta.tar",
+        "deploy": "cf deploy gen/mta.tar",
+        "deploy:mta": "npm run build:cds && npm run build:mta && npm run deploy"
     },
     "eslintConfig": {
         "extends": "eslint:recommended",
